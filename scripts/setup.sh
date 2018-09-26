@@ -15,7 +15,7 @@ git reset --hard $SHA
 git config --global user.email "oktauploader@okta.com"
 git config --global user.name "oktauploader-okta"
 
-if ! yarn install; then
+if ! yarn install --no-lockfile; then
   echo "yarn install failed! Exiting..."
   exit ${FAILED_SETUP}
 fi
